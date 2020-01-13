@@ -139,9 +139,7 @@ Puis nous avons désactivé le mode en arrière plan et  avons relevé les conso
 
 <style>
 
-    body {
-        font: 15px sans-serif;
-    }
+  
 
     .axis path,
     .axis line {
@@ -155,17 +153,43 @@ Puis nous avons désactivé le mode en arrière plan et  avons relevé les conso
     }
 
 </style>
+
 <div id="barchartdiv" style="width: 960px">
     <br>
-    <h5 class="text-center" >Consomation des données Activé/Désactivé</h5>
+    <h5 class="text-center" >Consomation des données en arrière plan (Activé/Désactivé)</h5>
     <br>
+  
+  
+  
+
+  
+  
+            
+            <ul class="dropdown-menu" role="menu">
+                <li><a class="m" value="jour1" href="#">Consommation Jour1</a></li>
+                <li><a class="m" value="jour2" href="#">Consommation Jour2</a></li>
+                <li><a class="m" value="jour3" href="#">Consommation Jour3</a></li>
+                <li><a class="m" value="jour4" href="#">Consommation Jour4</a></li>
+                <li><a class="m" value="jour5" href="#">Consommation Jour5</a></li>
+              
+              
+            </ul>
+            <br>
+  
+  
+  
+  
+  
+  
+  
+  
 
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
 
-        var margin = {top: 20, right: 20, bottom: 30, left: 40},
-            width = 960 - margin.left - margin.right,
-            height = 700 - margin.top - margin.bottom;
+        var margin = {top: 20, right: 30, bottom: 30, left: 60},
+            width = 1600 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
         var x0 = d3.scale.ordinal()
             .rangeRoundBands([0, width], .1);
@@ -185,7 +209,7 @@ Puis nous avons désactivé le mode en arrière plan et  avons relevé les conso
             .orient("left");
 
         var color = d3.scale.ordinal()
-            .range(["#f4a582", "#d5d5d5", "#ca0020", "#0571b0", "#92c5de"]);
+            .range(["#9e75ff", "#df3b12", "#ca0020", "#0571b0", "#92c5de"]);
 
         var svg = d3.select("#barchartdiv").append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -221,7 +245,7 @@ Puis nous avons désactivé le mode en arrière plan et  avons relevé les conso
                 .call(yAxis)
                 .append("text")
                 .attr("transform", "rotate(-90)")
-                .attr("y", 6)
+                .attr("y", -50)
                 .attr("dy", ".71em")
                 .style("text-anchor", "end")
                 .style('font-weight', 'bold')
@@ -313,7 +337,6 @@ Puis nous avons désactivé le mode en arrière plan et  avons relevé les conso
     </script>
 
 </div>
-
 						
 						
 						
