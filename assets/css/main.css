@@ -2434,8 +2434,8 @@
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #F64747;
-		border-color: #F64747;
+		background-color: #feecec;
+		border-color: #feecec;
 		color: #ffffff;
 	}
 
@@ -2844,7 +2844,7 @@
 	}
 
 		.wrapper.style1 {
-			background-color: #F64747;
+			background-color: #feecec;
 			color: #fdd1d1;
 		}
 
